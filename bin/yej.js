@@ -8,7 +8,7 @@ var unzip = require('unzip')
 var download = require('download')
 var fs = require('fs')
 var inquirer = require('inquirer')
-var pkg = require(./package.json)
+var pkg = require(../package.json)
 
 commander.version(pkg.version)
 commander.on('--help', function() {
