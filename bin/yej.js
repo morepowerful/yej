@@ -8,8 +8,9 @@ var unzip = require('unzip')
 var download = require('download')
 var fs = require('fs')
 var inquirer = require('inquirer')
+var pkg = require(./package.json)
 
-commander.version('1.0.0')
+commander.version(pkg.version)
 commander.on('--help', function() {
   console.log('******************   ' + chalk.yellow('API:') + '   ******************');
   console.log('');
