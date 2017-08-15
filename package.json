@@ -1,6 +1,6 @@
 {
   "name": "yej",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react-cli",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morepowerful/yej.git"
+  },
+  "bin": {
+    "yej": "index.js"
   },
   "author": "morepowerful",
   "license": "ISC",
