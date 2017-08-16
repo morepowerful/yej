@@ -134,10 +134,10 @@ function buildFunction() {
   } else {
     var build;
     try {
-      build = child_process('npm run build')
+     build = child_process('npm run build',  { encoding: 'utf8' })
     }catch(err) {
       console.log(err);
     }
-    process.stdout.write(build);
+     process.stdout.write(build)
   }
 }

@@ -1,3 +1,6 @@
+## Install
+$ npm install yej -g
+
 ## Usage
 
 - Generate a boilerplate.
