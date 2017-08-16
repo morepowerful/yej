@@ -131,11 +131,12 @@ function buildFunction() {
       console.log(chalk.red('Please ensure the right commends'));
     }
   } else {
+    var build;
     try {
-      var build = child_process('npm run build')
-      process.stdout.write(build)
+     build = child_process('npm run build',  { encoding: 'utf8' })
     }catch(err) {
       console.log(err);
     }
+     process.stdout.write(build)
   }
 }
