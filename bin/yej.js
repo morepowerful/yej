@@ -114,12 +114,13 @@ function serverFunction() {
       console.log(chalk.red('Please ensure the right commends'));
     }
   } else{
+    var server;
     try{
-      var server = child_process.execSync('npm run start')
-      process.stdout.write(server);
+      server = child_process.execSync('npm run start',  { encoding: 'utf8' })
     }catch(err) {
       console.log(err);
     }
+    process.stdout.write(server);
   }
 }
 
@@ -131,11 +132,12 @@ function buildFunction() {
       console.log(chalk.red('Please ensure the right commends'));
     }
   } else {
+    var build;
     try {
-      var build = child_process('npm run build')
-      process.stdout.write(build)
+      build = child_process('npm run build')
     }catch(err) {
       console.log(err);
     }
+    process.stdout.write(build);
   }
 }
