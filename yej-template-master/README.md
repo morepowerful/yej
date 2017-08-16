@@ -1,3 +1,0 @@
-
-# yej-template
-yej-template
