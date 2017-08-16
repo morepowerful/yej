@@ -12,7 +12,7 @@ $ yej init
 - Install the dependencies.
 
 ```bash
-$ cd yej-template-master(the project path)
+$ cd yej-template-master(init下来的react项目)
 $ yej install
 ```
 
