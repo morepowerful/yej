@@ -12,7 +12,7 @@ $ yej init
 - Install the dependencies.
 
 ```bash
-$ cd xx(the project path)
+$ cd yej-template-master(the project path)
 $ yej install
 ```
 
