@@ -1,3 +1,6 @@
+# [yej](https://github.com/morepowerful/yej)
+[![NPM version](https://img.shields.io/npm/v/yumu.svg?style=flat)](https://npmjs.org/package/yej)
+[![npm](https://img.shields.io/npm/dt/yumu.svg)](https://npmjs.org/package/yej)
 ## Install
 $ npm install yej -g
 
