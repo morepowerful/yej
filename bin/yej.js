@@ -117,7 +117,7 @@ function serverFunction() {
   } else{
     var server;
     try{
-      server = require('child_process').spawn(
+      server = child_process.spawn(
         process.platform === "win32" ? "npm.cmd" : "npm", ['start', '--color']
       );
       server.stdout.pipe(process.stdout);
