@@ -59,11 +59,11 @@ function initFunction() {
     }
   } else{
     try{
-      download('https://github.com/morepowerful/yej-template/archive/master.zip', process.cwd()).then(() => {
+      download('https://github.com/morepowerful/yej-demo/archive/master.zip', process.cwd()).then(() => {
         var unzipFile = unzip.Extract({path:process.cwd()})
-        fs.createReadStream('yej-template-master.zip').pipe(unzipFile)
+        fs.createReadStream('yej-demo.zip').pipe(unzipFile)
         unzipFile.on('close', function() {
-          fs.unlinkSync('yej-template-master.zip')
+          fs.unlinkSync('yej-demo.zip')
         })
       })
     } catch(err) {
@@ -81,25 +81,26 @@ function installFunction() {
     }
   } else{
     if(process.cwd().indexOf('yej-template-master') > 0) {
-      inquirer.prompt({
-        type: 'list',
-        name: 'installPath',
-        choices : ['npm','cnpm'],
-        default: 'npm',
-        message: '请选择你要用什么进行安装（Please choose the resource that you want to install）'
-      }).then(anwser => {
-        try{
-          var install
-          if(anwser.installPath == 'cnpm') {
-            install = child_process.execSync('cnpm install')
-          } else {
-            install = child_process.execSync('npm install')
-          }
-          process.stdout.write(install)
-        } catch(err){
-          console.log(err);
-        }
-      })
+      // inquirer.prompt({
+      //   type: 'list',
+      //   name: 'installPath',
+      //   choices : ['npm','cnpm'],
+      //   default: 'npm',
+      //   message: '请选择你要用什么进行安装（Please choose the resource that you want to install）'
+      // }).then(anwser => {
+      //   try{
+      //     var install
+      //     if(anwser.installPath == 'cnpm') {
+      //       install = child_process.execSync('cnpm install')
+      //     } else {
+      //       install = child_process.execSync('npm install')
+      //     }
+      //     process.stdout.write(install)
+      //   } catch(err){
+      //     console.log(err);
+      //   }
+      // })
+      process.stdout.write(child_process.execSync('npm install'))
     } else {
       console.log(chalk.yellow('请进入'+process.cwd()+'/yej-template-master文件里进行安装'));
     }
