@@ -124,7 +124,6 @@ function serverFunction() {
     }catch(err) {
       console.log(err);
     }
-    process.stdout.write(server);
   }
 }
 
