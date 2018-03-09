@@ -117,7 +117,10 @@ function serverFunction() {
   } else{
     var server;
     try{
-      server = child_process.execSync('npm run start',  { encoding: 'utf8' })
+      server = require('child_process').spawn(
+        process.platform === "win32" ? "npm.cmd" : "npm", ['start', '--color']
+      );
+      server.stdout.pipe(process.stdout);
     }catch(err) {
       console.log(err);
     }
@@ -135,7 +138,7 @@ function buildFunction() {
   } else {
     var build;
     try {
-     build = child_process('npm run build',  { encoding: 'utf8' })
+     build = child_process.execSync('npm run build',  { encoding: 'utf8' })
     }catch(err) {
       console.log(err);
     }
