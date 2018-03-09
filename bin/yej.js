@@ -61,9 +61,9 @@ function initFunction() {
     try{
       download('https://github.com/morepowerful/yej-demo/archive/master.zip', process.cwd()).then(() => {
         var unzipFile = unzip.Extract({path:process.cwd()})
-        fs.createReadStream('yej-demo.zip').pipe(unzipFile)
+        fs.createReadStream('yej-demo-master.zip').pipe(unzipFile)
         unzipFile.on('close', function() {
-          fs.unlinkSync('yej-demo.zip')
+          fs.unlinkSync('yej-demo-master.zip')
         })
       })
     } catch(err) {
