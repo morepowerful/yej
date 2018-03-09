@@ -24,7 +24,7 @@ commander.on('--help', function() {
 
 commander.parse(process.argv);
 if (!process.argv[2]) {
-  var help = child_process.exec('node index.js --help', function(err, stdout, stdree) {
+  var help = child_process.exec('yej --help', function(err, stdout, stdree) {
     if (err) {
       throw err;
     }
