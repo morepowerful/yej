@@ -80,7 +80,7 @@ function installFunction() {
       console.log(chalk.red('Please ensure the right commends'));
     }
   } else{
-    if(process.cwd().indexOf('yej-template-master') > 0) {
+    if(process.cwd().indexOf('yej-demo-master') > 0) {
       // inquirer.prompt({
       //   type: 'list',
       //   name: 'installPath',
@@ -102,7 +102,7 @@ function installFunction() {
       // })
       process.stdout.write(child_process.execSync('npm install'))
     } else {
-      console.log(chalk.yellow('请进入'+process.cwd()+'/yej-template-master文件里进行安装'));
+      console.log(chalk.yellow('请进入'+process.cwd()+'/yej-demo-master文件里进行安装'));
     }
   }
 }
