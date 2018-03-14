@@ -6,6 +6,8 @@ $ npm install yej -g
 
 ## Usage
 
+# 项目仓库点击[这里](https://github.com/morepowerful/yej)
+
 - Generate a boilerplate.
 
 ```bash
