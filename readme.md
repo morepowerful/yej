@@ -15,7 +15,7 @@ $ yej init
 - Install the dependencies.
 
 ```bash
-$ cd yej-template-master(init下来的react项目)
+$ cd yej-demo-master(init下来的react项目)
 $ yej install
 ```
 
